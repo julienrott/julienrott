@@ -1,6 +1,6 @@
 baseurl = "http://www.julienrott.fr"
 title = "Julien ROTT"
-copyright = "&copy; 2016 Julien ROTT"
+copyright = "&copy; 2017 Julien ROTT"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -12,7 +12,7 @@ disqusShortname = ""
 googleAnalytics = ""
 
 # Default language to use (if you setup multilingual support)
-defaultContentLanguage = "fr"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [blackfriday]
