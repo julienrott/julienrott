@@ -1,6 +1,6 @@
-baseurl = "https://example.com"
-title = "Academic Theme"
-copyright = "&copy; 2016 Your Name"
+baseurl = "http://www.julienrott.fr"
+title = "Julien ROTT"
+copyright = "&copy; 2016 Julien ROTT"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -12,7 +12,7 @@ disqusShortname = ""
 googleAnalytics = ""
 
 # Default language to use (if you setup multilingual support)
-defaultContentLanguage = "en"
+defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = false
 
 [blackfriday]
