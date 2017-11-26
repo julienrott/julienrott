@@ -4,11 +4,17 @@ title = "Angular 1"
 tags = []
 math = false
 image = ""
+summary = """
+Exemple simple d'une appli Angular
+"""
 
 +++
 
-Petit tutorial sur Angular 1
+<link rel="stylesheet" href="/css/custom.css">
 
+Petit tutorial sur Angular 1 avec une démo à la fin :)
+
+Fichier index html **index.html**
 ```html
 <!doctype html>
 <html class="no-js" lang="" ng-app="tuto">
@@ -184,3 +190,39 @@ function tutoService($http, $window) {
 
 }
 ```
+
+# Démo
+<div ng-app="tuto">
+    <div ng-controller="MainController as vm">
+
+        <hr>
+
+        <form id="searchForm" ng-submit="vm.save()">
+            <input type="text" ng-model="vm.todoLabel" id="todoLabel" placeholder="saisir une tâche à faire">
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
+
+        <hr>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Fait</th>
+                <th>Tâche</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tr ng-repeat="todo in vm.todos" ng-show="(todo.done === false) || (todo.done === true && vm.showDoneTodos === true)">
+                <td><input type="checkbox" ng-model="todo.done" ng-change="vm.todoChanged()" id="cb{{todo.id}}"></td>
+                <td><label ng-bind="todo.label" ng-class="{barre: todo.done}" for="cb{{todo.id}}"></label></td>
+                <td><a href="#" ng-click="vm.deleteTodo(todo.id)"><span class="glyphicon glyphicon-trash btn btn-danger"></span></a></td>
+            </tr>
+        </table>
+
+        <hr>
+
+    </div>
+</div>
+
+<script src="/js/angular.min.js"></script>
+<script src="/js/main.js"></script>
