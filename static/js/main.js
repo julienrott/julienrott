@@ -57,8 +57,8 @@ function mainController(TutoService) {
         vm.todos = TutoService.saveToLocalStorage(vm.todos);
     }
 
-    function deleteTodo(id) {
-    		event.preventDefault();
+    function deleteTodo(event, id) {
+        event.preventDefault();
         var indexToRemove = vm.todos.findIndex(function (element) {
             return element.id === id;
         });

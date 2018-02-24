@@ -215,7 +215,7 @@ function tutoService($http, $window) {
             <tr ng-repeat="todo in vm.todos" ng-show="(todo.done === false) || (todo.done === true && vm.showDoneTodos === true)">
                 <td><input type="checkbox" ng-model="todo.done" ng-change="vm.todoChanged()" id="cb{{todo.id}}"></td>
                 <td><label ng-bind="todo.label" ng-class="{barre: todo.done}" for="cb{{todo.id}}"></label></td>
-                <td><a href="#" ng-click="vm.deleteTodo(todo.id)"><span class="glyphicon glyphicon-trash btn btn-danger"></span></a></td>
+                <td><a href="#" ng-click="vm.deleteTodo($event, todo.id)"><span class="glyphicon glyphicon-trash btn btn-danger"></span></a></td>
             </tr>
         </table>
 
